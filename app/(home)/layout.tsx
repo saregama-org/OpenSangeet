@@ -10,7 +10,7 @@ import {
 import Link from "fumadocs-core/link";
 import Image from "next/image";
 import Preview from "@/public/banner.png";
-import { Book, ComponentIcon, Pencil, PlusIcon, Server } from "lucide-react";
+import { Music } from "lucide-react";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -23,14 +23,19 @@ export default function Layout({ children }: { children: ReactNode }) {
           text: "Learn",
           items: [
             {
-              text: "Getting Started",
-              url: "/docs/ui",
-              icon: <Book />,
+              text: "Svara",
+              url: "/docs/svara",
+              icon: <Music />,
             },
             {
-              text: "Components",
-              url: "/docs/ui/components",
-              icon: <ComponentIcon />,
+              text: "Raga",
+              url: "/docs/raga",
+              icon: <Music />,
+            },
+            {
+              text: "Bandish",
+              url: "/docs/bandish",
+              icon: <Music />,
             },
           ],
         },
@@ -40,10 +45,10 @@ export default function Layout({ children }: { children: ReactNode }) {
           children: (
             <NavbarMenu>
               <NavbarMenuTrigger>
-                <Link href="/docs/svar">Learn</Link>
+                <Link href="/docs/svara">Learn</Link>
               </NavbarMenuTrigger>
               <NavbarMenuContent className="text-[15px]">
-                <NavbarMenuLink href="/docs/svar" className="md:row-span-2">
+                <NavbarMenuLink href="/docs/svara" className="md:row-span-2">
                   <div className="-mx-3 -mt-3">
                     <Image
                       src={Preview}
@@ -55,42 +60,33 @@ export default function Layout({ children }: { children: ReactNode }) {
                       }}
                     />
                   </div>
-                  <p className="font-medium">Svar</p>
+                  <p className="font-medium">Svara</p>
                   <p className="text-fd-muted-foreground text-sm">
                     Learn musical notes
                   </p>
                 </NavbarMenuLink>
-                <NavbarMenuLink href="/docs/raga" className="md:row-span-2">
-                  <div className="-mx-3 -mt-3">
-                    <Image
-                      src={Preview}
-                      alt="Perview"
-                      className="rounded-t-lg object-cover"
-                      style={{
-                        maskImage:
-                          "linear-gradient(to bottom,white 60%,transparent)",
-                      }}
-                    />
-                  </div>
+
+                <NavbarMenuLink href="/docs/raga" className="lg:col-start-2">
+                  <Music className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
                   <p className="font-medium">Raga</p>
                   <p className="text-fd-muted-foreground text-sm">Learn raga</p>
                 </NavbarMenuLink>
-                <NavbarMenuLink href="/docs/bandish" className="md:row-span-2">
-                  <div className="-mx-3 -mt-3">
-                    <Image
-                      src={Preview}
-                      alt="Perview"
-                      className="rounded-t-lg object-cover"
-                      style={{
-                        maskImage:
-                          "linear-gradient(to bottom,white 60%,transparent)",
-                      }}
-                    />
-                  </div>
+
+                <NavbarMenuLink href="/docs/bandish" className="lg:col-start-2">
+                  <Music className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
                   <p className="font-medium">Bandish</p>
                   <p className="text-fd-muted-foreground text-sm">
                     Learn bandish
                   </p>
+                </NavbarMenuLink>
+
+                <NavbarMenuLink
+                  href="/docs/tala"
+                  className="lg:col-start-3 lg:row-start-1"
+                >
+                  <Music className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
+                  <p className="font-medium">Tala</p>
+                  <p className="text-fd-muted-foreground text-sm">Learn Tala</p>
                 </NavbarMenuLink>
               </NavbarMenuContent>
             </NavbarMenu>
