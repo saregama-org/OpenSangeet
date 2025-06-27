@@ -1,6 +1,6 @@
-# OpenSangeet
+# Saregama
 
-Learn Indian classical music for free
+Indian Classical Music Archive
 
 ## Installation
 
