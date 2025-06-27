@@ -2,8 +2,7 @@ import { type LinkItemType } from "fumadocs-ui/layouts/docs";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import { Music } from "lucide-react";
 import Image from "next/image";
-import DarkLogo from "@/public/logo-dark.png";
-import LightLogo from "@/public/logo-light.png";
+import Logo from "@/public/logo.png";
 
 export const linkItems: LinkItemType[] = [
   {
@@ -13,7 +12,7 @@ export const linkItems: LinkItemType[] = [
   },
   {
     type: "icon",
-    url: "https://github.com/opensangeet/OpenSangeet",
+    url: "https://github.com/saregama-org/Saregama",
     text: "GitHub",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
@@ -25,18 +24,7 @@ export const linkItems: LinkItemType[] = [
 ];
 
 export const logo = (
-  <>
-    <Image
-      src={LightLogo}
-      className="dark:hidden w-5 md:w-5"
-      alt="OpenSangeet Logo"
-    />
-    <Image
-      src={DarkLogo}
-      className="hidden dark:flex w-5 md:w-5"
-      alt="OpenSangeet Logo"
-    />
-  </>
+  <Image src={Logo} className="w-[21px]" alt="Saregama Logo" />
 );
 
 export const baseOptions: BaseLayoutProps = {
@@ -44,9 +32,7 @@ export const baseOptions: BaseLayoutProps = {
     title: (
       <>
         {logo}
-        <span className="text-[14px] font-medium">
-          <span>OpenSangeet</span>
-        </span>
+        <span className="text-[15px] font-medium">Saregama</span>
       </>
     ),
   },

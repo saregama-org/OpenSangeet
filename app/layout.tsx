@@ -7,10 +7,10 @@ import "katex/dist/katex.css";
 
 export const metadata = createMetadata({
   title: {
-    template: "%s | OpenSangeet",
-    default: "OpenSangeet - Learn Indian classical music for free",
+    template: "%s | Saregama",
+    default: "Saregama - Indian Classical Music Archive",
   },
-  description: "Learn Indian classical music for free",
+  description: "Indian Classical Music Archive",
   metadataBase: baseUrl,
 });
 
