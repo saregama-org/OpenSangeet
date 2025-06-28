@@ -2,7 +2,8 @@ import { type LinkItemType } from "fumadocs-ui/layouts/docs";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import { Music } from "lucide-react";
 import Image from "next/image";
-import Logo from "@/public/logo.png";
+import DarkLogo from "@/public/logo-dark.png";
+import LightLogo from "@/public/logo-light.png";
 
 export const linkItems: LinkItemType[] = [
   {
@@ -24,7 +25,18 @@ export const linkItems: LinkItemType[] = [
 ];
 
 export const logo = (
-  <Image src={Logo} className="w-[21px]" alt="Saregama Logo" />
+  <>
+    <Image
+      src={LightLogo}
+      className="dark:hidden w-5 md:w-5"
+      alt="AIcademy Logo"
+    />
+    <Image
+      src={DarkLogo}
+      className="hidden dark:flex w-5 md:w-5"
+      alt="AIcademy Logo"
+    />
+  </>
 );
 
 export const baseOptions: BaseLayoutProps = {
